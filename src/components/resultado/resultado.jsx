@@ -10,7 +10,7 @@ const resultado = (props) => {
           {props.result !== null ? (
             <img
               alt={props.result}
-              src={`/apps/jokenpo/assets/images/${props.result}.png`}
+              src={`/assets/images/${props.result}.png`}
             />
           ) : (
             ''

@@ -151,21 +151,21 @@
   outline: none;
 }
 button.Rock {
-  background-image: url('/apps/jokenpo/assets/images/Rock.png');
+  background-image: url('/assets/images/Rock.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
 }
 button.Paper {
-  background-image: url('/apps/jokenpo/assets/images/Paper.png');
+  background-image: url('/assets/images/Paper.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
 }
 button.Scissors {
-  background-image: url('/apps/jokenpo/assets/images/Scissors.png');
+  background-image: url('/assets/images/Scissors.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
