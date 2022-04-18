@@ -1,0 +1,206 @@
+:root {
+  --color01: #bc658d;
+  --color02: #82c4c3;
+  --color03: #f9d89c;
+  --color04: #f5a7a7;
+}
+.App {
+  height: 100%;
+  display: grid;
+  grid-row-gap: 1.5rem;
+  background-color: var(--color02);
+
+  grid-template-rows: 6rem 1fr;
+  grid-template-columns: 1fr;
+  font-family: 'Sriracha', cursive;
+}
+.App header {
+  background-color: var(--color01);
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0rem .2rem .1rem rgba(0,0,0,0.3);
+}
+
+.App header h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: white;
+
+  margin: 0;
+  text-align: center;
+  align-self: center;
+}
+
+.App main {
+  grid-row: 2/3;
+
+  height: 100%;
+  display: grid;
+
+  grid-template-rows: 3fr 1fr;
+}
+
+.App main #resultado {
+  grid-row: 1/2;
+  height: 100%;
+}
+.App main #resultado .wrapper {
+  height: 65vh;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 6rem 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+}
+.App main #resultado .wrapper .score {
+  padding-top: 0.3rem;
+  grid-column: 1/4;
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: var(--color03);
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: var(--color01);
+  height: 100%;
+}
+.App main #resultado .wrapper img {
+  background-color: white;
+  max-width: 90%;
+}
+.App main #resultado .wrapper .choose {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding-left: 1rem;
+  /* border-left: 2px solid var(--color04); */
+  border-right: 2px solid white;
+  background-color: white;
+}
+.App main #resultado .wrapper .versus {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 6rem;
+  background-color: white;
+}
+.App main #resultado .wrapper .result {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  padding-right: 1rem;
+  /* border-right: 2px solid var(--color04); */
+  border-left: 2px solid white;
+  background-color: white;
+}
+
+@keyframes result{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+.App main #resultado .wrapper .result img {
+  transform: scaleX(-1);
+  animation: result 1s forwards;
+}
+.App main #resultado .wrapper .winner {
+  grid-column: 1/4;
+  grid-row: 3/4;
+
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color01);
+  background-color: var(--color03);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.App main #resultado .wrapper .choose,
+.App main #resultado .wrapper .versus,
+.App main #resultado .wrapper .result,
+.App main #resultado .wrapper .winner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main #opcoes {
+  padding: 0 1rem 2rem;
+  grid-row: 2/3;
+}
+.App main #opcoes ul {
+  margin: 0;
+  padding: 1rem;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.App main #opcoes ul li {
+  padding: 1rem;
+  display: flex;
+  height: 100%;
+  width: 33.33333333%;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0rem rgba(0, 0, 0, 0.3);
+  background-color: var(--color03);
+}
+.App main #opcoes ul li:nth-child(2) {
+  margin: 0 1rem;
+}
+.App main #opcoes ul li button {
+  border-radius: 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+button.Rock {
+  background-image: url('/apps/jokenpo/assets/images/Rock.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+button.Paper {
+  background-image: url('/apps/jokenpo/assets/images/Paper.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+button.Scissors {
+  background-image: url('/apps/jokenpo/assets/images/Scissors.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+.App nav {
+  padding: 0;
+  background-color: burlywood;
+  grid-row: 3/4;
+}
+.App nav ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.App nav ul li {
+  display: flex;
+  height: 100%;
+  width: 25%;
+}
+.App nav ul li button {
+  align-self: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 6rem;
+  border: 1px solid gray;
+}
+
+.border{
+  border:6px solid var(--color01) !important
+}
+.no-border{
+  border: none;
+}
