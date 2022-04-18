@@ -4,4 +4,10 @@
 
 Rock paper scissors game in react to test some funcionalities. 
 
-Available to play in 
+Available to play in https://jokenpo.wildiney.com/
+
+## SCREENSHOT
+
+<div align="center">
+  <img src="https://github.com/wildiney/rock-paper-scissor/blob/master/screenshots/screenshot-01.png" width="414" />
+</div>
