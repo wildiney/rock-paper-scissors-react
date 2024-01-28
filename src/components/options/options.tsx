@@ -21,7 +21,7 @@ const Options: React.FC<Options> = ({ options, selected, clickHandler }) => {
             <li
               key={index}
               className={`
-              ${optionSelected === item ? 'border-4 border-primary ' : 'border-0'}
+              ${optionSelected === item ? 'border-4 border-primary ' : 'border-4 border-tertiary'}
               flex flex-col m-0 w-full h-full box-border shadow-lg p-4  bg-tertiary rounded-lg
                 `
               }>

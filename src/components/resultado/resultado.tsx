@@ -14,16 +14,12 @@ const Resultado: React.FC<Resultado> = ({ score, result, winner }) => {
         <p className='font-sriracha bg-tertiary w-full text-2xl text-primary font-bold text-center p-2'>PONTUAÇÃO: {score}</p>
 
         <div className='flex flex-1 justify-center items-center h-auto overflow-hidden'>
-          {result !== null ? (
+          {result &&
             <img
               alt={result}
               src={`/assets/images/${result}.png`}
-
               className='max-w-full  max-h-[40vh]'
-            />
-          ) : (
-            ''
-          )}
+            />}
         </div>
         <div className='bg-tertiary min-h-12 flex justify-center items-center'>
           <p className='font-sriracha text-primary font-bold text-2xl'>{winner != null ? winner : null}</p>
