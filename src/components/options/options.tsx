@@ -14,16 +14,20 @@ const Options: React.FC<Options> = ({ options, selected, clickHandler }) => {
   }
 
   return (
-    <section id='opcoes'>
-      <ul>
+    <section>
+      <ul className="flex gap-3 sm:gap-6 items-center">
         {options.map((item, index: number) => {
           return (
             <li
               key={index}
-              className={optionSelected === item ? 'border' : 'no-border'}>
+              className={`flex flex-col m-0 w-full h-full overflow-hidden box-border
+                `
+              }>
               <button
-                className={item}
-                // onClick={() => toggleCSS()}
+                className={
+                  `${optionSelected === item ? 'border-4 border-primary rounded-lg' : 'border-0'}
+                  ${item} 
+                  w-full  bg-tertiary  rounded-lg shadow-lg aspect-square`}
                 onClick={() => buttonHandler(item)}
                 value={item}
                 name={item}

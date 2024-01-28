@@ -8,7 +8,7 @@ import Options from './components/options/options'
 type RockPaperScissors = {
   userChoice: string,
   systemChoice: string,
-  result: string,
+  result: string | null,
   score: number,
   newGames?: number
 }
@@ -20,7 +20,7 @@ function App () {
   const [RockPaperScissors, setRockPaperScissors] = useState<RockPaperScissors>({
     userChoice: "",
     systemChoice: "",
-    result: "",
+    result: null,
     score: 0,
     newGames: 1
   })
@@ -81,9 +81,9 @@ function App () {
 
 
   return (
-    <div className="App">
+    <div className="h-full flex flex-col bg-secondary">
       <Header title="JOKENPO" />
-      <main>
+      <main className='flex flex-col h-full w-full p-6 gap-6 '>
         <Resultado
           // choose={RockPaperScissors.userChoice}
           result={RockPaperScissors.systemChoice}
@@ -96,12 +96,6 @@ function App () {
           clickHandler={chooseHandler}
         />
       </main>
-      {/* <nav>
-        <ul>
-          <li><button>Jogo</button></li>
-          <li><button>Config</button></li>
-        </ul>
-      </nav> */}
     </div>
   );
 }
