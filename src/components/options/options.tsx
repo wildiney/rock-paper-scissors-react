@@ -20,7 +20,7 @@ const Options: React.FC<Options> = ({ options, selected, clickHandler }) => {
           return (
             <li
               key={index}
-              className={`flex flex-col m-0 w-full h-full overflow-hidden box-border
+              className={`flex flex-col m-0 w-full h-full box-border shadow-lg
                 `
               }>
               <button
