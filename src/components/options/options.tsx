@@ -20,14 +20,16 @@ const Options: React.FC<Options> = ({ options, selected, clickHandler }) => {
           return (
             <li
               key={index}
-              className={`flex flex-col m-0 w-full h-full box-border shadow-lg
+              className={`
+              ${optionSelected === item ? 'border-4 border-primary ' : 'border-0'}
+              flex flex-col m-0 w-full h-full box-border shadow-lg p-4  bg-tertiary rounded-lg
                 `
               }>
               <button
                 className={
-                  `${optionSelected === item ? 'border-4 border-primary rounded-lg' : 'border-0'}
+                  `
                   ${item} 
-                  w-full  bg-tertiary  rounded-lg shadow-lg aspect-square`}
+                  w-full  bg-tertiary   aspect-square max-h-[20vh]`}
                 onClick={() => buttonHandler(item)}
                 value={item}
                 name={item}

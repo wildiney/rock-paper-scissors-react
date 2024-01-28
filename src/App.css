@@ -9,19 +9,19 @@
 
 button.Rock {
   background-image: url("/assets/images/Rock.png");
-  background-size: 80%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
 button.Paper {
   background-image: url("/assets/images/Paper.png");
-  background-size: 80%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
 button.Scissors {
   background-image: url("/assets/images/Scissors.png");
-  background-size: 80%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
