@@ -1,4 +1,7 @@
 import React from 'react';
+import Paper from '../../assets/images/Paper.png'
+import Rock from '../../assets/images/Rock.png'
+import Scissors from '../../assets/images/Scissors.png'
 
 type Resultado = {
   score: string,
@@ -7,22 +10,21 @@ type Resultado = {
 }
 
 const Resultado: React.FC<Resultado> = ({ score, result, winner }) => {
-
   return (
-    <section className='w-full h-full flex gap-6 flex-row bg-white rounded-xl overflow-hidden shadow-lg'>
+    <section className='flex flex-row w-full h-full gap-6 overflow-hidden bg-white shadow-lg rounded-xl'>
       <div className='flex flex-col w-full'>
-        <p className='font-sriracha bg-tertiary w-full text-2xl text-primary font-bold text-center p-2'>PONTUAÇÃO: {score}</p>
+        <p className='w-full p-2 text-2xl font-bold text-center font-sriracha bg-tertiary text-primary'>PONTUAÇÃO: {score}</p>
 
-        <div className='flex flex-1 justify-center items-center h-auto overflow-hidden'>
+        <div className='flex items-center justify-center flex-1 h-auto overflow-hidden'>
           {result &&
             <img
               alt={result}
-              src={`/assets/images/${result}.png`}
+              src={result == 'Paper' ? Paper : result == 'Rock' ? Rock : Scissors}
               className='max-w-full  max-h-[40vh]'
             />}
         </div>
-        <div className='bg-tertiary min-h-12 flex justify-center items-center'>
-          <p className='font-sriracha text-primary font-bold text-2xl'>{winner != null ? winner : null}</p>
+        <div className='flex items-center justify-center bg-tertiary min-h-12'>
+          <p className='text-2xl font-bold font-sriracha text-primary'>{winner != null ? winner : null}</p>
         </div>
       </div>
     </section>
