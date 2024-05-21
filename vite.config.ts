@@ -33,6 +33,7 @@ export default defineConfig({
       }
     })
   ],
+  base: "/rock-paper-scissor",
   test: {
     include: ["**/*.test.tsx"],
     globals: true,
