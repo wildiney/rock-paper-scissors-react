@@ -10,7 +10,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
@@ -33,7 +33,7 @@ export default defineConfig({
       }
     })
   ],
-  base: "/rock-paper-scissor",
+  base: "/rock-paper-scissors-react/",
   test: {
     include: ["**/*.test.tsx"],
     globals: true,
